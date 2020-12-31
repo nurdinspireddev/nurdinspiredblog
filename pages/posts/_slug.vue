@@ -2,10 +2,9 @@
   <div>
     <div class="post-head">
       <h1>{{ post.title }}</h1>
-
       <div>
-        <div class="date">{{ post.createdAt | longDtTm }}</div>
-        <div class="tags">
+        <div>{{ post.createdAt | longDtTm }}</div>
+        <div>
           <span v-for="tag in post.tags" :key="tag">
             <v-chip class="ma-2" close :to="'/tag/' + tag">
               {{ tag }}

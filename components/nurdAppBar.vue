@@ -4,7 +4,13 @@
       <v-toolbar-title>nurd inspired</v-toolbar-title>
 
       <v-spacer></v-spacer>
-
+      <v-switch
+        color="#fff"
+        v-model="$vuetify.theme.dark"
+        inset
+        label="Light / Dark"
+        persistent-hint
+      ></v-switch>
       <!-- <v-menu left bottom>
         <template v-slot:activator="{ on, attrs }">
           <v-btn icon v-bind="attrs" v-on="on">
@@ -28,8 +34,8 @@ import { mdiDotsVertical } from '@mdi/js'
 export default {
   data() {
     return {
-      dots: mdiDotsVertical
+      dots: mdiDotsVertical,
     }
-  }
+  },
 }
 </script>
