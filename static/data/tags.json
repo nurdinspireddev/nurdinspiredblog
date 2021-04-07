@@ -1,0 +1,40 @@
+{
+    "tagArray": [
+        {
+          "name": "JavaScript",
+          "link": "JavaScript",
+          "color": "yellow",
+          "textColor": "black"
+        },
+        {
+          "name": "C#",
+          "link": "C#",
+          "color": "purple",
+          "textColor": "white"
+        },
+        {
+          "name": "DataEngineering",
+          "link": "DataEngineering",
+          "color": "black",
+          "textColor": "white"
+        },
+        {
+          "name": "SqlServer",
+          "link": "SqlServer",
+          "color": "red",
+          "textColor": "white"
+        },
+        {
+          "name": "Vue.JS",
+          "link": "Vue.JS",
+          "color": "green",
+          "textColor": "white"
+        },
+        {
+          "name": "Vuex",
+          "link": "Vuex",
+          "color": "green",
+          "textColor": "white"
+        }
+    ]
+}

@@ -11,7 +11,6 @@
             <span v-for="(t, index) in tagArray" :key="index">
               <v-chip
                 :class="[`ma-2 ${t.textColor}--text`]"
-                close
                 :to="`/tag/${t.link}`"
                 :color="t.color"
               >
@@ -25,49 +24,19 @@
   </v-footer>
 </template>
 <script>
+import tags from '@/static/data/tags.json'
+
 export default {
   data() {
     return {
       fixed: false,
-      tagArray: [
-        {
-          name: 'JavaScript',
-          link: 'JavaScript',
-          color: 'yellow',
-          textColor: 'black',
-        },
-        {
-          name: 'C#',
-          link: 'C#',
-          color: 'purple',
-          textColor: 'white',
-        },
-        {
-          name: 'DataEngineering',
-          link: 'DataEngineering',
-          color: 'black',
-          textColor: 'white',
-        },
-        {
-          name: 'SqlServer',
-          link: 'SqlServer',
-          color: 'red',
-          textColor: 'white',
-        },
-        {
-          name: 'Vue.JS',
-          link: 'Vue.JS',
-          color: 'green',
-          textColor: 'white',
-        },
-        {
-          name: 'Vuex',
-          link: 'Vuex',
-          color: 'green',
-          textColor: 'white',
-        },
-      ],
+      tagArray: tags.tagArray,
     }
+  },
+  computed: {
+    page() {
+      return this.$route.meta
+    },
   },
 }
 </script>

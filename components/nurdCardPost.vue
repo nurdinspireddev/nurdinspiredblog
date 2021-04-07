@@ -3,21 +3,19 @@
     <v-card class="mx-auto" max-width="400">
       <nuxt-link :to="`/posts/${post.slug}`" tag="div" class="is-link">
         <v-img
-          class="white--text align-end"
           alt=""
           :src="post.image"
-          :class="{ 'on-hover': hover }"
+          :class="[{ 'on-hover': hover }, 'align-end', 'white--text']"
         >
-          <v-card-title>{{ post.title }}</v-card-title>
+          <!-- :class="`${$vuetify.theme.dark}--text`" -->
+          <v-card-title v-text="post.title" />
         </v-img>
       </nuxt-link>
 
-      <v-card-subtitle class="pb-0">
-        {{ post.subtitle }}
-      </v-card-subtitle>
+      <v-card-subtitle class="pb-0" v-text="post.subtitle" />
 
       <v-card-actions>
-        <v-spacer></v-spacer>
+        <v-spacer />
 
         <v-btn icon @click="show = !show">
           <v-icon color="orange">{{ show ? chevronUp : chevronDown }}</v-icon>
@@ -26,11 +24,9 @@
 
       <v-expand-transition>
         <div v-show="show">
-          <v-divider></v-divider>
+          <v-divider />
 
-          <v-card-text>
-            {{ post.description }}
-          </v-card-text>
+          <v-card-text v-text="post.description" />
         </div>
       </v-expand-transition>
     </v-card>
@@ -59,8 +55,6 @@ export default {
 </script>
 
 <style lang="sass" scoped>
-.on-hover.theme--dark
+.on-hover
   transform: scale(1.1)
-  >.v-card__text
-    color: #000
 </style>

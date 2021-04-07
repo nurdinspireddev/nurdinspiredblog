@@ -2,7 +2,7 @@
 title: Test 2
 description: 'Technical title description of what this is about'
 tags:
-  - VueJS
+  - Vue.JS
   - Vuex
 ---
 
