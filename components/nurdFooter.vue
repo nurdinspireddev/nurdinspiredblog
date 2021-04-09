@@ -1,42 +1,46 @@
 <template>
-  <v-footer :fixed="fixed" app>
-    <v-row>
-      <v-col>
-        <span>&copy; {{ new Date().getFullYear() }}</span>
+  <v-footer :fixed="false" app>
+    <v-row class="d-none d-md-flex">
+      <!-- Nurd Tags  -->
+      <v-col cols="12" xs="12" md="6">
+        <nurd-tags />
       </v-col>
-      <v-col>
-        <v-col cols="12" xs="12">
-          <div>
-            <h1>Tags</h1>
-            <span v-for="(t, index) in tagArray" :key="index">
-              <v-chip
-                :class="[`ma-2 ${t.textColor}--text`]"
-                :to="`/tag/${t.link}`"
-                :color="t.color"
-              >
-                {{ t.name }}
-              </v-chip>
-            </span>
-          </div>
-        </v-col>
+
+      <!-- Nurd Social -->
+      <!-- <v-col cols="12" xs="12" md="3">
+        <nurd-social />
+      </v-col> -->
+
+      <!-- Nurd Copyright -->
+      <v-col
+        cols="12"
+        xs="12"
+        md="3"
+        offset-md="3"
+        align-self="end"
+        style="text-align: end"
+      >
+        <v-row>
+          <v-col cols="12" class="py-0">
+            <!-- Nurd Social -->
+            <nurd-social />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col cols="12" class="py-0">
+            <span class="body-2"
+              >NurdInspiredDev &copy; {{ new Date().getFullYear() }}</span
+            >
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-footer>
 </template>
 <script>
-import tags from '@/static/data/tags.json'
-
 export default {
   data() {
-    return {
-      fixed: false,
-      tagArray: tags.tagArray,
-    }
-  },
-  computed: {
-    page() {
-      return this.$route.meta
-    },
+    return {}
   },
 }
 </script>

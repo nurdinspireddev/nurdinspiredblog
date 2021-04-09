@@ -11,18 +11,18 @@
   </v-row>
 </template>
 <script>
-import nurdCardPost from '~/components/nurdCardPost.vue'
-
 export default {
-  components: {
-    nurdCardPost,
-  },
   async asyncData({ $content, params }) {
     const post = await $content('posts', { deep: true })
       .only(['title', 'subtitle', 'description', 'image', 'slug', 'dir'])
       .sortBy('createdAt', 'asc')
       .fetch()
     return { post }
+  },
+  head() {
+    return {
+      title: 'HI!',
+    }
   },
 }
 </script>

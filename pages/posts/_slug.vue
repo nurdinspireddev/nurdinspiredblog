@@ -51,5 +51,11 @@ export default {
       })
     }
   },
+  //dynamically set Page to Post Title
+  head() {
+    return {
+      title: this.post.title,
+    }
+  },
 }
 </script>

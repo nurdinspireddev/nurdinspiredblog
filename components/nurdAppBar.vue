@@ -1,41 +1,89 @@
 <template>
   <div>
-    <v-app-bar color="deep-purple accent-4" dense dark>
-      <v-toolbar-title>nurd inspired</v-toolbar-title>
+    <!-- App Bar -->
+    <v-app-bar color="deep-purple accent-4" dense dark fixed app>
+      <v-toolbar-title class="is-link headline" @click="clickToHome">
+        Nurd Inspired Dev
+      </v-toolbar-title>
 
       <v-spacer></v-spacer>
-      <v-switch
-        color="#fff"
-        v-model="$vuetify.theme.dark"
-        inset
-        label="Light / Dark"
-        persistent-hint
-      ></v-switch>
-      <!-- <v-menu left bottom>
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn icon v-bind="attrs" v-on="on">
-            <v-icon>{{ dots }}</v-icon>
-          </v-btn>
-        </template>
 
-        <v-list>
-          <v-list-item v-for="n in 5" :key="n" @click="() => {}">
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu> -->
+      <v-btn icon @click="drawer = true">
+        <v-icon>{{ menu }}</v-icon>
+      </v-btn>
     </v-app-bar>
+
+    <v-navigation-drawer v-model="drawer" absolute temporary right>
+      <!-- Close Drawer -->
+      <v-row>
+        <v-col cols="12" align="end">
+          <v-btn icon @click="drawer = false">
+            <v-icon>{{ close }}</v-icon>
+          </v-btn>
+        </v-col>
+      </v-row>
+
+      <!-- Theme Switch -->
+      <v-row>
+        <v-col cols="12">
+          <v-switch
+            class="mx-4"
+            v-model="$vuetify.theme.dark"
+            inset
+            label="Light/Dark Theme"
+            persistent-hint
+            dense
+          />
+        </v-col>
+      </v-row>
+
+      <!-- Nav Items -->
+      <v-list nav>
+        <v-list-item-group v-model="group">
+          <v-list-item link to="/">
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item link to="/about">
+            <v-list-item-title>About</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+
+      <!-- Nurd Tag Links -->
+      <v-row>
+        <v-col cols="12">
+          <nurd-tags />
+        </v-col>
+      </v-row>
+
+      <!-- Nurd Social Links -->
+      <v-row>
+        <v-col cols="12">
+          <nurd-social />
+        </v-col>
+      </v-row>
+    </v-navigation-drawer>
   </div>
 </template>
 
 <script>
-import { mdiDotsVertical } from '@mdi/js'
+import { mdiDotsVertical, mdiMenu, mdiClose } from '@mdi/js'
 
 export default {
   data() {
     return {
       dots: mdiDotsVertical,
+      menu: mdiMenu,
+      close: mdiClose,
+      drawer: false,
+      group: null,
     }
+  },
+  methods: {
+    clickToHome() {
+      this.$router.push('/')
+    },
   },
 }
 </script>

@@ -11,10 +11,5 @@
 </template>
 
 <script>
-export default {
-  components: {
-    nurdAppBar: () => import('../components/nurdAppBar.vue'),
-    nurdFooter: () => import('../components/nurdFooter.vue')
-  }
-}
+export default {}
 </script>
