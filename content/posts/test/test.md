@@ -4,6 +4,7 @@ description: 'Technical title description of what this is about'
 tags:
   - SqlServer
   - C#
+author: Daniel C
 ---
 
 # Test 1

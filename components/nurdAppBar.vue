@@ -8,6 +8,17 @@
 
       <v-spacer></v-spacer>
 
+      <!-- Theme Toggle Button -->
+      <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
+        <v-icon color="blue lighten-1" v-if="!$vuetify.theme.dark">
+          {{ night }}
+        </v-icon>
+        <v-icon color="yellow" v-if="$vuetify.theme.dark">
+          {{ sunny }}
+        </v-icon>
+      </v-btn>
+
+      <!-- Drawer Menu Button  -->
       <v-btn icon @click="drawer = true">
         <v-icon>{{ menu }}</v-icon>
       </v-btn>
@@ -20,20 +31,6 @@
           <v-btn icon @click="drawer = false">
             <v-icon>{{ close }}</v-icon>
           </v-btn>
-        </v-col>
-      </v-row>
-
-      <!-- Theme Switch -->
-      <v-row>
-        <v-col cols="12">
-          <v-switch
-            class="mx-4"
-            v-model="$vuetify.theme.dark"
-            inset
-            label="Light/Dark Theme"
-            persistent-hint
-            dense
-          />
         </v-col>
       </v-row>
 
@@ -68,12 +65,20 @@
 </template>
 
 <script>
-import { mdiDotsVertical, mdiMenu, mdiClose } from '@mdi/js'
+import {
+  mdiDotsVertical,
+  mdiMenu,
+  mdiClose,
+  mdiWeatherNight,
+  mdiWeatherSunny,
+} from '@mdi/js'
 
 export default {
   data() {
     return {
       dots: mdiDotsVertical,
+      night: mdiWeatherNight,
+      sunny: mdiWeatherSunny,
       menu: mdiMenu,
       close: mdiClose,
       drawer: false,

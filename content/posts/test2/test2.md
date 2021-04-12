@@ -4,6 +4,7 @@ description: 'Technical title description of what this is about'
 tags:
   - Vue.JS
   - Vuex
+author: Daniel C
 ---
 
 # Test 2

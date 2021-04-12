@@ -1,0 +1,20 @@
+[
+        {
+          "name": "Josh C",
+          "githubProfile": "josh-cmps",
+          "githubUrl": "https://github.com/josh-cmps",
+          "twitterProfile": "@joshcmps",
+          "twitterUrl": "https://twitter.com/joshcmps",
+          "instagramProfile": "@Test",
+          "instagramUrl": "https://instagram.com/test",
+          "photoUrl": "",
+          "color": "#424242"
+        },
+        {
+          "name": "Daniel C",
+          "githubUrl": "",
+          "twitterUrl": "",
+          "photoUrl": "",
+          "color": "#424242"
+        }
+]
