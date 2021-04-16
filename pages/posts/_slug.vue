@@ -1,24 +1,33 @@
 <template>
-  <div>
+  <v-container fluid>
+    <div class="background-shape"></div>
     <div>
-      <h1 v-html="post.title" />
-      <div>
-        <div>{{ post.createdAt | longDtTm }}</div>
-        <div>
-          <span v-for="tag in post.tags" :key="tag.name">
-            <v-chip
-              :class="[`ma-2 ${tag.textColor}--text`]"
-              :to="'/tag/' + tag"
-              :color="tag.color"
-            >
-              {{ tag.name }}
-            </v-chip>
-          </span>
-        </div>
-      </div>
+      <v-row>
+        <v-col cols="12" md="4">
+          <v-img class="nurd-radius" alt="user" :src="`/${post.image}`" />
+        </v-col>
+        <v-col cols="12" md="8" class="text-right">
+          <h1 v-html="post.title" />
+          <div>
+            <div>{{ post.createdAt | longDtTm }}</div>
+            <div>
+              <span v-for="tag in post.tags" :key="tag.name">
+                <v-chip
+                  :class="[`ma-2 ${tag.textColor}--text`]"
+                  :to="'/tag/' + tag"
+                  :color="tag.color"
+                >
+                  {{ tag.name }}
+                </v-chip>
+              </span>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+      <v-spacer class="py-10" />
+      <nuxt-content :document="post" />
     </div>
-    <nuxt-content :document="post" />
-  </div>
+  </v-container>
 </template>
 <script>
 import tags from '@/static/data/tags.json'
@@ -59,3 +68,18 @@ export default {
   },
 }
 </script>
+<style scoped>
+.background-shape {
+  opacity: 0.1;
+  background: #1565c0;
+  width: 100%;
+  height: 450px;
+  -ms-transform: skewY(-3eg);
+  -webkit-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+  border-radius: 30px;
+  position: absolute;
+  top: 0px;
+  left: 18px;
+}
+</style>

@@ -1,6 +1,6 @@
 <template>
   <div class="ml-3">
-    <h3>Keep In Touch!</h3>
+    <span class="title">Keep In Touch!</span>
     <span v-for="(dm, index) in dms" :key="index">
       <v-btn
         class="ma-2"

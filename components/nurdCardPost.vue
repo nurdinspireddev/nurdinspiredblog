@@ -1,11 +1,16 @@
 <template>
   <v-hover v-slot="{ hover }">
-    <v-card class="mx-auto" max-width="400">
+    <v-card class="nurd-radius mx-auto" max-width="400">
       <nuxt-link :to="`/posts/${post.slug}`" tag="div" class="is-link">
         <v-img
           alt=""
           :src="post.image"
-          :class="[{ 'on-hover': hover }, 'align-end', 'white--text']"
+          :class="[
+            { 'on-hover': hover },
+            'align-end',
+            'white--text',
+            'nurd-radius',
+          ]"
         >
         </v-img>
       </nuxt-link>

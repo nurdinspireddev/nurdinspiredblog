@@ -14,7 +14,8 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", href:"https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;1,300;1,400&display=swap" }
     ]
   },
 
@@ -47,7 +48,7 @@ export default {
   content: {
     markdown: {
     prism: {
-      theme: 'prism-themes/themes/prism-operator.css'
+      theme: 'prism-themes/themes/prism-dm-mono.css'
     }
   }
   },

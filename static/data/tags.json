@@ -47,6 +47,12 @@
           "link": "Yarn",
           "color": "blue",
           "textColor": "white"
+        },
+        {
+          "name": "VSCode",
+          "link": "VSCode",
+          "color": "blue darken-4",
+          "textColor": "white"
         }
     ]
 }

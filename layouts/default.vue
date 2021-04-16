@@ -18,6 +18,10 @@ export default {}
   font-family: 'Roboto', Tahoma;
 }
 
+.nurd-radius {
+  border-radius: 15px !important;
+}
+
 /* Override default vuetify `Code` markdown css, Prism Theme is used */
 .v-application code {
   all: unset;

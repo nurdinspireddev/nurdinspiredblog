@@ -3,7 +3,6 @@
     <v-card width="600">
       <!-- Card Title -->
       <v-card-title
-        dark
         class="mt-8"
         :style="`background-color: ${authorCardDatas.cardColor}`"
       >
@@ -14,11 +13,12 @@
             src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
           />
         </v-avatar>
-        <p dark class="ml-3" v-html="authorCardDatas.name" />
+        <p class="ml-3" v-html="authorCardDatas.name" />
 
         <!-- Author Name  Social Chips -->
-        <div>
+        <div class="mt-2">
           <v-chip
+            dark
             v-if="authorCardDatas.twitterUrl"
             target="_blank"
             :href="authorCardDatas.twitterUrl"
@@ -31,6 +31,7 @@
           </v-chip>
 
           <v-chip
+            dark
             v-if="authorCardDatas.githubUrl"
             target="_blank"
             :href="authorCardDatas.githubUrl"
@@ -43,6 +44,7 @@
           </v-chip>
 
           <v-chip
+            dark
             v-if="authorCardDatas.instagramUrl"
             target="_blank"
             :href="authorCardDatas.instagramUrl"

@@ -24,7 +24,7 @@
       </v-btn>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" absolute temporary right>
+    <v-navigation-drawer v-model="drawer" app temporary right>
       <!-- Close Drawer -->
       <v-row>
         <v-col cols="12" align="end">
