@@ -5,7 +5,7 @@
       <v-card-title
         dark
         class="mt-8"
-        :style="`background-color: ${authorCardDatas.color}`"
+        :style="`background-color: ${authorCardDatas.cardColor}`"
       >
         <!-- Author Pic -->
         <v-avatar size="56">
@@ -14,10 +14,10 @@
             src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
           />
         </v-avatar>
+        <p dark class="ml-3" v-html="authorCardDatas.name" />
 
         <!-- Author Name  Social Chips -->
         <div>
-          <p class="ml-3" v-html="authorCardDatas.name" />
           <v-chip
             v-if="authorCardDatas.twitterUrl"
             target="_blank"
@@ -64,7 +64,7 @@
           <v-timeline-item
             v-for="message in authorCardDatas.work"
             :key="message.title"
-            :color="authorCardDatas.color"
+            :color="authorCardDatas.timelineColor"
             small
           >
             <div>

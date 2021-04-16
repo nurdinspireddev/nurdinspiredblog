@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="post-head">
+    <div>
       <h1 v-html="post.title" />
       <div>
         <div>{{ post.createdAt | longDtTm }}</div>

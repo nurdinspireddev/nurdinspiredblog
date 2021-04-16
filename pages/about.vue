@@ -67,7 +67,8 @@ export default {
         let authorIndex = this.authors.findIndex((f) => f.name === obj.author)
         this.teamMembers.push({
           name: obj.author,
-          color: this.authors[authorIndex].color,
+          timelineColor: this.authors[authorIndex].timelineColor,
+          cardColor: this.authors[authorIndex].cardColor,
           githubProfile: this.authors[authorIndex].githubProfile,
           githubUrl: this.authors[authorIndex].githubUrl,
           twitterProfile: this.authors[authorIndex].twitterProfile,

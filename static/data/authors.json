@@ -1,20 +1,22 @@
 [
         {
           "name": "Josh C",
-          "githubProfile": "josh-cmps",
-          "githubUrl": "https://github.com/josh-cmps",
-          "twitterProfile": "@joshcmps",
-          "twitterUrl": "https://twitter.com/joshcmps",
-          "instagramProfile": "@Test",
-          "instagramUrl": "https://instagram.com/test",
+          "githubProfile": "itsJoshCampos",
+          "githubUrl": "https://github.com/itsJoshCampos",
+          "twitterProfile": "@itsJoshCampos",
+          "twitterUrl": "https://twitter.com/itsjoshcampos",
+          "instagramProfile": "@itsJoshCampos",
+          "instagramUrl": "https://instagram.com/itsjoshcampos",
           "photoUrl": "",
-          "color": "#424242"
+          "cardColor": "",
+          "timelineColor": "#607D8B"
         },
         {
           "name": "Daniel C",
           "githubUrl": "",
           "twitterUrl": "",
           "photoUrl": "",
-          "color": "#424242"
+          "cardColor": "",
+          "timelineColor": "#607D8B"
         }
 ]

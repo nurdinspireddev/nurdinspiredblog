@@ -7,11 +7,10 @@
           :src="post.image"
           :class="[{ 'on-hover': hover }, 'align-end', 'white--text']"
         >
-          <!-- :class="`${$vuetify.theme.dark}--text`" -->
-          <v-card-title v-text="post.title" />
         </v-img>
       </nuxt-link>
 
+      <v-card-title v-text="post.title" />
       <v-card-subtitle class="pb-0" v-text="post.subtitle" />
 
       <v-card-actions>

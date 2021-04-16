@@ -35,6 +35,18 @@
           "link": "Vuex",
           "color": "green",
           "textColor": "white"
+        },
+        {
+          "name": "Npm",
+          "link": "Npm",
+          "color": "red",
+          "textColor": "white"
+        },
+        {
+          "name": "Yarn",
+          "link": "Yarn",
+          "color": "blue",
+          "textColor": "white"
         }
     ]
 }

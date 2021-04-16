@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import { mdiTwitter, mdiInstagram, mdiGithub } from '@mdi/js'
+import { mdiTwitter, mdiInstagram, mdiGithub, mdiYoutube } from '@mdi/js'
 
 export default {
   data() {
@@ -38,9 +38,15 @@ export default {
         },
         {
           name: 'GitHub',
-          link: 'https://github.com/nurdinspireddev"',
+          link: 'https://github.com/nurdinspireddev',
           icon: mdiGithub,
           color: 'grey',
+        },
+        {
+          name: 'YouTube',
+          link: 'https://www.youtube.com/channel/UCJ2Xk43PkQYCStMtOTVd2AQ',
+          icon: mdiYoutube,
+          color: 'red',
         },
       ],
     }
