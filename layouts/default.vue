@@ -13,8 +13,13 @@
 <script>
 export default {}
 </script>
-<style scoped>
+<style>
 #app {
   font-family: 'Roboto', Tahoma;
+}
+
+/* Override default vuetify `Code` markdown css, Prism Theme is used */
+.v-application code {
+  all: unset;
 }
 </style>

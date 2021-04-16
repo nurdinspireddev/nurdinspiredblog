@@ -17,7 +17,7 @@ author: Josh C
 
 You can see your current `http` and `https` proxy configurations, if any. To view your current NPM config file in your terminal, enter the following command:
 
-```js
+```bash
 npm config list
 ```
 
