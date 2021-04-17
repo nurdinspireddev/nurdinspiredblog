@@ -1,18 +1,21 @@
 <template>
   <v-hover v-slot="{ hover }">
     <v-card class="nurd-radius mx-auto" max-width="400">
-      <nuxt-link :to="`/posts/${post.slug}`" tag="div" class="is-link">
-        <v-img
-          alt=""
-          :src="post.image"
-          :class="[
-            { 'on-hover': hover },
-            'align-end',
-            'white--text',
-            'nurd-radius',
-          ]"
-        >
-        </v-img>
+
+      <nuxt-link :to="`/posts/${post.slug}`" v-slot="{ navigate }" custom>
+        <span @click="navigate" @keypress.enter="navigate" role="link">
+          <v-img
+            alt=""
+            :src="post.image"
+            :class="[
+              { 'on-hover': hover },
+              'align-end',
+              'white--text',
+              'nurd-radius',
+            ]"
+          >
+          </v-img>
+        </span>
       </nuxt-link>
 
       <v-card-title v-text="post.title" />
