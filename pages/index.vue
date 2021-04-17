@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const post = await $content('posts', { deep: true })
       .only(['title', 'subtitle', 'description', 'image', 'slug', 'dir'])
       .sortBy('createdAt', 'asc')
