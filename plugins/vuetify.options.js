@@ -19,6 +19,7 @@ export default {
       light: {
         primary: colors.blue.lighten3,
         accent: colors.grey.darken3,
+        secondary: colors.amber.lighten3,
         warning: colors.amber.darken4,
       },
     }

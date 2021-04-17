@@ -53,6 +53,12 @@
           "link": "VSCode",
           "color": "blue darken-4",
           "textColor": "white"
+        },
+        {
+          "name": "macOS",
+          "link": "macOS",
+          "color": "black",
+          "textColor": "white"
         }
     ]
 }

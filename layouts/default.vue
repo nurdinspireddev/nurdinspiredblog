@@ -26,4 +26,9 @@ export default {}
 .v-application code {
   all: unset;
 }
+
+.v-application a {
+  color: var(--v-info-base) !important;
+  text-decoration: none;
+}
 </style>
