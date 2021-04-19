@@ -3,15 +3,16 @@
     <span class="title">Keep In Touch!</span>
     <span v-for="(dm, index) in dms" :key="index">
       <v-btn
-        class="ma-2"
         fab
         x-small
+        class="ma-2"
         dark
         :color="dm.color"
         target="_blank"
         :href="dm.link"
       >
-        <v-icon>{{ dm.icon }}</v-icon>
+        <!-- White icon fill -->
+        <v-icon color="#fff">{{ dm.icon }}</v-icon>
       </v-btn>
     </span>
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-card width="600">
+    <v-card width="600" class="nurd-radius" elevation="10">
       <!-- Card Title -->
       <v-card-title
         class="mt-8"
@@ -23,11 +23,14 @@
             target="_blank"
             :href="authorCardDatas.twitterUrl"
             color="blue"
+            class="is-link-no-decoration"
           >
             <v-avatar left>
-              <v-icon>{{ twitter }}</v-icon>
+              <v-icon color="#fff">{{ twitter }}</v-icon>
             </v-avatar>
-            {{ authorCardDatas.twitterProfile }}
+            <span class="is-link-no-decoration">
+              {{ authorCardDatas.twitterProfile }}
+            </span>
           </v-chip>
 
           <v-chip
@@ -38,9 +41,11 @@
             color="grey"
           >
             <v-avatar left>
-              <v-icon>{{ github }}</v-icon>
+              <v-icon color="#fff">{{ github }}</v-icon>
             </v-avatar>
-            {{ authorCardDatas.githubProfile }}
+            <span class="is-link-no-decoration">
+              {{ authorCardDatas.githubProfile }}
+            </span>
           </v-chip>
 
           <v-chip
@@ -51,9 +56,11 @@
             color="pink"
           >
             <v-avatar left>
-              <v-icon>{{ instagram }}</v-icon>
+              <v-icon color="#fff">{{ instagram }}</v-icon>
             </v-avatar>
-            {{ authorCardDatas.instagramProfile }}
+            <span class="is-link-no-decoration">
+              {{ authorCardDatas.instagramProfile }}
+            </span>
           </v-chip>
         </div>
       </v-card-title>

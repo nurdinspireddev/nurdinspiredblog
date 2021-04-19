@@ -1,28 +1,38 @@
 <template>
   <div>
     <!-- App Bar -->
-    <v-app-bar color="deep-purple accent-4" dense dark fixed app>
-      <v-toolbar-title class="is-link headline" @click="clickToHome">
-        Nurd Inspired Dev
-      </v-toolbar-title>
 
-      <v-spacer></v-spacer>
-
+    <div class="nurd-bar">
       <!-- Theme Toggle Button -->
-      <v-btn icon @click="$vuetify.theme.dark = !$vuetify.theme.dark">
-        <v-icon color="blue lighten-1" v-if="!$vuetify.theme.dark">
-          {{ night }}
-        </v-icon>
-        <v-icon color="yellow" v-if="$vuetify.theme.dark">
-          {{ sunny }}
-        </v-icon>
-      </v-btn>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn
+            icon
+            @click="$vuetify.theme.dark = !$vuetify.theme.dark"
+            v-bind="attrs"
+            v-on="on"
+          >
+            <v-icon color="blue darken-4" v-if="!$vuetify.theme.dark">
+              {{ night }}
+            </v-icon>
+            <v-icon color="yellow" v-if="$vuetify.theme.dark">
+              {{ sunny }}
+            </v-icon>
+          </v-btn>
+        </template>
+        <span>Theme Toggle</span>
+      </v-tooltip>
 
       <!-- Drawer Menu Button  -->
-      <v-btn icon @click="drawer = true">
-        <v-icon>{{ menu }}</v-icon>
-      </v-btn>
-    </v-app-bar>
+      <v-tooltip bottom>
+        <template v-slot:activator="{ on, attrs }">
+          <v-btn icon @click="drawer = true" v-bind="attrs" v-on="on">
+            <v-icon>{{ menu }}</v-icon>
+          </v-btn>
+        </template>
+        <span>Menu</span>
+      </v-tooltip>
+    </div>
 
     <v-navigation-drawer v-model="drawer" app temporary right>
       <!-- Close Drawer -->
@@ -46,20 +56,6 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
-
-      <!-- Nurd Tag Links -->
-      <v-row>
-        <v-col cols="12">
-          <nurd-tags />
-        </v-col>
-      </v-row>
-
-      <!-- Nurd Social Links -->
-      <v-row>
-        <v-col cols="12">
-          <nurd-social />
-        </v-col>
-      </v-row>
     </v-navigation-drawer>
   </div>
 </template>
@@ -70,7 +66,7 @@ import {
   mdiMenu,
   mdiClose,
   mdiWeatherNight,
-  mdiWeatherSunny,
+  mdiWhiteBalanceSunny,
 } from '@mdi/js'
 
 export default {
@@ -78,7 +74,7 @@ export default {
     return {
       dots: mdiDotsVertical,
       night: mdiWeatherNight,
-      sunny: mdiWeatherSunny,
+      sunny: mdiWhiteBalanceSunny,
       menu: mdiMenu,
       close: mdiClose,
       drawer: false,
@@ -92,3 +88,12 @@ export default {
   },
 }
 </script>
+<style>
+.nurd-bar {
+  z-index: 1000;
+  position: relative;
+  text-align: right;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+</style>
