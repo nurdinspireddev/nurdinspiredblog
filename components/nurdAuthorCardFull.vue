@@ -13,7 +13,47 @@
             src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
           />
         </v-avatar>
-        <p class="text-h5 ml-3" v-html="authorCardData.name" />
+
+        <p class="text-h5 ml-3 mt-4" v-html="authorCardData.name" />
+
+        <v-btn
+          dark
+          fab
+          small
+          v-if="authorCardData.twitterUrl"
+          target="_blank"
+          :href="authorCardData.twitterUrl"
+          color="blue"
+          class="mx-3"
+        >
+          <v-icon color="#fff">{{ twitter }}</v-icon>
+        </v-btn>
+
+        <v-btn
+          dark
+          fab
+          small
+          v-if="authorCardData.instagramUrl"
+          target="_blank"
+          :href="authorCardData.instagramUrl"
+          color="pink"
+          class="mx-3"
+        >
+          <v-icon color="#fff">{{ instagram }}</v-icon>
+        </v-btn>
+
+        <v-btn
+          dark
+          fab
+          small
+          v-if="authorCardData.githubUrl"
+          target="_blank"
+          :href="authorCardData.githubUrl"
+          color="grey"
+          class="mx-3"
+        >
+          <v-icon color="#fff">{{ github }}</v-icon>
+        </v-btn>
       </v-card-title>
 
       <!-- Author Profile  -->
@@ -24,7 +64,7 @@
       </v-card-subtitle>
 
       <!-- Social Chips -->
-      <v-card-subtitle>
+      <!-- <v-card-subtitle class="text-center">
         <v-chip
           dark
           small
@@ -32,7 +72,7 @@
           target="_blank"
           :href="authorCardData.twitterUrl"
           color="blue"
-          class="mr-2"
+          class="ma-2"
         >
           <v-avatar left>
             <v-icon color="#fff">{{ twitter }}</v-icon>
@@ -49,7 +89,7 @@
           target="_blank"
           :href="authorCardData.githubUrl"
           color="grey"
-          class="mr-2"
+          class="ma-2"
         >
           <v-avatar left>
             <v-icon color="#fff">{{ github }}</v-icon>
@@ -66,7 +106,7 @@
           target="_blank"
           :href="authorCardData.instagramUrl"
           color="pink"
-          class="mr-2"
+          class="ma-2"
         >
           <v-avatar left>
             <v-icon color="#fff">{{ instagram }}</v-icon>
@@ -75,7 +115,7 @@
             {{ authorCardData.instagramProfile }}
           </span>
         </v-chip>
-      </v-card-subtitle>
+      </v-card-subtitle> -->
 
       <!-- Author Recent Work Timeline -->
       <v-card-text v-if="posts.length">
@@ -128,7 +168,7 @@ export default {
       .only(['title', 'description', 'slug', 'dir', 'author', 'createdAt'])
       .where({ author: this.authorCardData.name })
       .limit(5)
-      .sortBy('createdAt', 'asc')
+      .sortBy('createdAt', 'desc')
       .fetch()
   },
 }

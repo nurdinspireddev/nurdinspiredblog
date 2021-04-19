@@ -15,7 +15,7 @@
               <span v-for="tag in post.tags" :key="tag.name">
                 <v-chip
                   :class="[`ma-2 ${tag.textColor}--text`]"
-                  :to="'/tag/' + tag"
+                  :to="'/tag/' + tag.link"
                   :color="tag.color"
                 >
                   {{ tag.name }}
@@ -36,7 +36,7 @@ import tags from '@/static/data/tags.json'
 export default {
   data() {
     return {
-      tagArray: tags.tagArray,
+      tagArray: tags,
     }
   },
   async asyncData({ params, error, $content }) {
@@ -48,7 +48,7 @@ export default {
 
       //Match tags from post to tags.json for metadata
       const dataTags = post.tags.map((item) => {
-        let t = tags.tagArray[tags.tagArray.findIndex((f) => f.name === item)]
+        let t = tags[tags.findIndex((f) => f.name === item)]
         return t
       })
       post.tags = dataTags
