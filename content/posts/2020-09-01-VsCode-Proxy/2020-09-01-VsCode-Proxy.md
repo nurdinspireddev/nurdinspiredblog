@@ -5,7 +5,7 @@ description: 'Wondering why your NPM Modules are failing to load? Timing out beh
 image: img/2020-09-01-VsCode-Proxy/index.png
 tags:
   - VSCode
-author: Daniel C
+author: Josh C
 ---
 
 ## VS Code Preferences

@@ -1,6 +1,7 @@
 [
         {
           "name": "Josh C",
+          "profile": "Software Engineer from the 915, West Texas is what I call home.  Go Red Sox!",
           "githubProfile": "itsJoshCampos",
           "githubUrl": "https://github.com/itsJoshCampos",
           "twitterProfile": "@itsJoshCampos",
@@ -9,22 +10,35 @@
           "instagramUrl": "https://instagram.com/itsjoshcampos",
           "photoUrl": "",
           "cardColor": "",
-          "timelineColor": "#607D8B"
+          "timelineColor": "#607D8B",
+          "work":[]
         },
         {
           "name": "Daniel C",
+          "profile": "Yo! ",
+          "githubProfile": "",
           "githubUrl": "",
+          "twitterProfile": "",
           "twitterUrl": "",
+          "instagramProfile": "",
+          "instagramUrl": "",
           "photoUrl": "",
           "cardColor": "",
-          "timelineColor": "#607D8B"
+          "timelineColor": "#607D8B",
+          "work":[]
         },
         {
-          "name": "Esme G",
+          "name": "Esme ",
+          "profile": "Yo! ",
+          "githubProfile": "",
           "githubUrl": "",
+          "twitterProfile": "",
           "twitterUrl": "",
+          "instagramProfile": "",
+          "instagramUrl": "",
           "photoUrl": "",
           "cardColor": "",
-          "timelineColor": "#607D8B"
+          "timelineColor": "#607D8B",
+          "work":[]
         }
 ]

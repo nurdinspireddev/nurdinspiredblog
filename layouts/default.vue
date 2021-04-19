@@ -1,5 +1,5 @@
 <template>
-  <v-app dark id="app">
+  <v-app id="app" dark>
     <nurd-app-bar></nurd-app-bar>
     <v-main>
       <v-container>
@@ -50,6 +50,32 @@ export default {}
   border-radius: 30px;
   position: absolute;
   top: -100px;
+}
+.background-shape-right {
+  opacity: 0.1;
+  background: #1565c0;
+  width: 100%;
+  height: 450px;
+  -ms-transform: skewY(-3eg);
+  -webkit-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+  border-radius: 30px;
+  position: absolute;
+  top: 0px;
+  left: 18px;
+}
+.background-shape-left {
+  opacity: 0.1;
+  background: #d84315;
+  width: 100%;
+  height: 550px;
+  -ms-transform: skewY(-3eg);
+  -webkit-transform: skewY(-3deg);
+  transform: skewY(-3deg);
+  border-radius: 30px;
+  position: absolute;
+  top: 500px;
+  right: 18px;
 }
 
 /* Override default vuetify `Code` markdown css, Prism Theme is used */

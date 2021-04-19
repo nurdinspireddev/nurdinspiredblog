@@ -35,18 +35,11 @@
     </div>
 
     <v-navigation-drawer v-model="drawer" app temporary right>
-      <!-- Close Drawer -->
-      <v-row>
-        <v-col cols="12" align="end">
-          <v-btn icon @click="drawer = false">
-            <v-icon>{{ close }}</v-icon>
-          </v-btn>
-        </v-col>
-      </v-row>
-
       <!-- Nav Items -->
       <v-list nav>
         <v-list-item-group v-model="group">
+          <v-list-item link> </v-list-item>
+
           <v-list-item link to="/">
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item>

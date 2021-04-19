@@ -1,6 +1,7 @@
 <template>
   <v-container fluid>
-    <div class="background-shape"></div>
+    <div class="background-shape-right"></div>
+    <nurd-back-home />
     <div>
       <v-row>
         <v-col cols="12" md="4">
@@ -68,18 +69,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.background-shape {
-  opacity: 0.1;
-  background: #1565c0;
-  width: 100%;
-  height: 450px;
-  -ms-transform: skewY(-3eg);
-  -webkit-transform: skewY(-3deg);
-  transform: skewY(-3deg);
-  border-radius: 30px;
-  position: absolute;
-  top: 0px;
-  left: 18px;
-}
-</style>
