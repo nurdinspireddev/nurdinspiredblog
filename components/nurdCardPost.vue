@@ -1,7 +1,6 @@
 <template>
   <v-hover v-slot="{ hover }">
-    <v-card class="nurd-radius mx-auto" max-width="400">
-
+    <v-card class="nurd-radius mx-auto" max-width="450">
       <nuxt-link :to="`/posts/${post.slug}`" v-slot="{ navigate }" custom>
         <span @click="navigate" @keypress.enter="navigate" role="link">
           <v-img
@@ -12,6 +11,7 @@
               'align-end',
               'white--text',
               'nurd-radius',
+              'is-link',
             ]"
           >
           </v-img>
@@ -22,6 +22,9 @@
       <v-card-subtitle class="pb-0" v-text="post.subtitle" />
 
       <v-card-actions>
+        <span class="mx-3">{{ post.author }}</span>
+        <v-divider vertical inset class="mx-3" />
+        <span>Last Updated: {{ post.createdAt | shortDt }}</span>
         <v-spacer />
 
         <v-btn icon @click="show = !show">

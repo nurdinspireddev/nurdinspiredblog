@@ -2,7 +2,7 @@
 title: NPM and Yarn Behind a Proxy
 subtitle: Update your proxy config settings
 description: 'Wondering why your NPM Modules are failing to load? Timing out behind a corporate network?'
-image: img/2020-08-28-NpmYarnProxy/index.png
+image: img/2020-12-07-NpmYarnProxy/index.png
 tags:
   - Npm
   - Yarn

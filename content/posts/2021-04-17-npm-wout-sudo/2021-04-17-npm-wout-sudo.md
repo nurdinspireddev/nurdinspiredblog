@@ -1,7 +1,7 @@
 ---
 title: npm without SUDO on macOS
 subtitle: Save yourself from NPM Sudo headache
-description: Less keystrokes makes us all better peopl
+description: Less keystrokes makes us all better people
 image: img/2021-04-17-npm-wout-sudo/index.png
 tags:
   - Npm

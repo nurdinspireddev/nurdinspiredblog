@@ -1,47 +1,28 @@
 <template>
-  <v-footer>
-    <v-row class="d-none d-md-flex">
-      <!-- Nurd Tags  -->
-      <v-col cols="12" xs="12" md="6" class="py-0">
+  <v-footer :color="`${$vuetify.theme.dark ? '#121212' : '#fff'}`">
+    <!-- Nurd Tags  -->
+    <v-row align="center">
+      <v-col cols="12" xs="12" style="text-align: center" class="py-0">
         <nurd-tags />
       </v-col>
-
       <!-- Nurd Social -->
-      <!-- <v-col cols="12" xs="12" md="3">
-        <nurd-social />
-      </v-col> -->
-
-      <!-- Nurd Copyright -->
-      <v-col
-        cols="12"
-        xs="12"
-        md="3"
-        offset-md="3"
-        align-self="end"
-        style="text-align: end"
-        class="py-0"
-      >
+      <v-col cols="12" xs="12">
         <v-row>
-          <v-col cols="12" class="py-0">
-            <!-- Nurd Social -->
+          <!-- Nurd Social -->
+          <v-col cols="12" style="text-align: center">
             <nurd-social />
           </v-col>
         </v-row>
-        <v-row>
-          <v-col cols="12" class="py-0">
-            <span class="body-2"
-              >NurdInspiredDev &copy; {{ new Date().getFullYear() }}</span
-            >
-          </v-col>
-        </v-row>
+      </v-col>
+      <!-- Nurd Copyright -->
+      <v-col cols="12" class="text-right">
+        <span class="body-2">
+          NurdInspiredDev &copy; {{ new Date().getFullYear() }}
+        </span>
       </v-col>
     </v-row>
   </v-footer>
 </template>
 <script>
-export default {
-  data() {
-    return {}
-  },
-}
+export default {}
 </script>

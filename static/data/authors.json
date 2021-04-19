@@ -1,22 +1,47 @@
 [
-        {
-          "name": "Josh C",
-          "githubProfile": "itsJoshCampos",
-          "githubUrl": "https://github.com/itsJoshCampos",
-          "twitterProfile": "@itsJoshCampos",
-          "twitterUrl": "https://twitter.com/itsjoshcampos",
-          "instagramProfile": "@itsJoshCampos",
-          "instagramUrl": "https://instagram.com/itsjoshcampos",
-          "photoUrl": "",
-          "cardColor": "",
-          "timelineColor": "#607D8B"
-        },
-        {
-          "name": "Daniel C",
-          "githubUrl": "",
-          "twitterUrl": "",
-          "photoUrl": "",
-          "cardColor": "",
-          "timelineColor": "#607D8B"
-        }
+  {
+    "name": "Josh C",
+    "avatar": "/img/avatar/red_sox.png",
+    "profile": "Software Engineer from the 915, West Texas is what I call home.  Go Sox!",
+    "githubProfile": "itsJoshCampos",
+    "githubUrl": "https://github.com/itsJoshCampos",
+    "twitterProfile": "@itsJoshCampos",
+    "twitterUrl": "https://twitter.com/itsjoshcampos",
+    "instagramProfile": "@itsJoshCampos",
+    "instagramUrl": "https://instagram.com/itsjoshcampos",
+    "photoUrl": "",
+    "cardColor": "",
+    "timelineColor": "#607D8B",
+    "work":[]
+  },
+  {
+    "name": "Daniel C",
+    "avatar": "/img/avatar/nurd_inspired_avatar.png",
+    "profile": "",
+    "githubProfile": "",
+    "githubUrl": "",
+    "twitterProfile": "",
+    "twitterUrl": "",
+    "instagramProfile": "",
+    "instagramUrl": "",
+    "photoUrl": "",
+    "cardColor": "",
+    "timelineColor": "#607D8B",
+    "work":[]
+  },
+  {
+    "name": "Esme G",
+    "avatar": "/img/avatar/nurd_inspired_avatar.png",
+    "profile": "",
+    "githubProfile": "",
+    "githubUrl": "",
+    "twitterProfile": "",
+    "twitterUrl": "",
+    "instagramProfile": "",
+    "instagramUrl": "",
+    "photoUrl": "",
+    "cardColor": "",
+    "timelineColor": "#607D8B",
+    "work":[]
+  }
 ]

@@ -1,80 +1,139 @@
 <template>
   <div>
-    <v-card width="600">
+    <v-card class="nurd-radius" elevation="10">
       <!-- Card Title -->
       <v-card-title
         class="mt-8"
-        :style="`background-color: ${authorCardDatas.cardColor}`"
+        :style="`background-color: ${authorCardData.cardColor}`"
       >
         <!-- Author Pic -->
-        <v-avatar size="56">
-          <img
-            alt="user"
-            src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
-          />
+        <v-avatar size="100">
+          <img alt="user" :src="authorCardData.avatar" />
         </v-avatar>
-        <p class="ml-3" v-html="authorCardDatas.name" />
 
-        <!-- Author Name  Social Chips -->
-        <div class="mt-2">
-          <v-chip
-            dark
-            v-if="authorCardDatas.twitterUrl"
-            target="_blank"
-            :href="authorCardDatas.twitterUrl"
-            color="blue"
-          >
-            <v-avatar left>
-              <v-icon>{{ twitter }}</v-icon>
-            </v-avatar>
-            {{ authorCardDatas.twitterProfile }}
-          </v-chip>
+        <p class="text-h5 ml-3 mt-4" v-html="authorCardData.name" />
 
-          <v-chip
-            dark
-            v-if="authorCardDatas.githubUrl"
-            target="_blank"
-            :href="authorCardDatas.githubUrl"
-            color="grey"
-          >
-            <v-avatar left>
-              <v-icon>{{ github }}</v-icon>
-            </v-avatar>
-            {{ authorCardDatas.githubProfile }}
-          </v-chip>
+        <v-btn
+          dark
+          fab
+          small
+          v-if="authorCardData.twitterUrl"
+          target="_blank"
+          :href="authorCardData.twitterUrl"
+          color="blue"
+          class="mx-3"
+        >
+          <v-icon color="#fff">{{ twitter }}</v-icon>
+        </v-btn>
 
-          <v-chip
-            dark
-            v-if="authorCardDatas.instagramUrl"
-            target="_blank"
-            :href="authorCardDatas.instagramUrl"
-            color="pink"
-          >
-            <v-avatar left>
-              <v-icon>{{ instagram }}</v-icon>
-            </v-avatar>
-            {{ authorCardDatas.instagramProfile }}
-          </v-chip>
-        </div>
+        <v-btn
+          dark
+          fab
+          small
+          v-if="authorCardData.instagramUrl"
+          target="_blank"
+          :href="authorCardData.instagramUrl"
+          color="pink"
+          class="mx-3"
+        >
+          <v-icon color="#fff">{{ instagram }}</v-icon>
+        </v-btn>
+
+        <v-btn
+          dark
+          fab
+          small
+          v-if="authorCardData.githubUrl"
+          target="_blank"
+          :href="authorCardData.githubUrl"
+          color="grey"
+          class="mx-3"
+        >
+          <v-icon color="#fff">{{ github }}</v-icon>
+        </v-btn>
       </v-card-title>
 
+      <!-- Author Profile  -->
+      <v-card-subtitle class="pt-3 pb-0">
+        <blockquote class="blockquote ml-3">
+          {{ authorCardData.profile }}
+        </blockquote>
+      </v-card-subtitle>
+
+      <!-- Social Chips -->
+      <!-- <v-card-subtitle class="text-center">
+        <v-chip
+          dark
+          small
+          v-if="authorCardData.twitterUrl"
+          target="_blank"
+          :href="authorCardData.twitterUrl"
+          color="blue"
+          class="ma-2"
+        >
+          <v-avatar left>
+            <v-icon color="#fff">{{ twitter }}</v-icon>
+          </v-avatar>
+          <span class="is-link-no-decoration">
+            {{ authorCardData.twitterProfile }}
+          </span>
+        </v-chip>
+
+        <v-chip
+          dark
+          small
+          v-if="authorCardData.githubUrl"
+          target="_blank"
+          :href="authorCardData.githubUrl"
+          color="grey"
+          class="ma-2"
+        >
+          <v-avatar left>
+            <v-icon color="#fff">{{ github }}</v-icon>
+          </v-avatar>
+          <span class="is-link-no-decoration">
+            {{ authorCardData.githubProfile }}
+          </span>
+        </v-chip>
+
+        <v-chip
+          dark
+          small
+          v-if="authorCardData.instagramUrl"
+          target="_blank"
+          :href="authorCardData.instagramUrl"
+          color="pink"
+          class="ma-2"
+        >
+          <v-avatar left>
+            <v-icon color="#fff">{{ instagram }}</v-icon>
+          </v-avatar>
+          <span class="is-link-no-decoration">
+            {{ authorCardData.instagramProfile }}
+          </span>
+        </v-chip>
+      </v-card-subtitle> -->
+
       <!-- Author Recent Work Timeline -->
-      <v-card-text>
+      <v-card-text v-if="posts.length">
         <div class="font-weight-bold ml-8 my-2">Recent Work</div>
 
         <v-timeline align-top dense>
           <v-timeline-item
-            v-for="message in authorCardDatas.work"
-            :key="message.title"
-            :color="authorCardDatas.timelineColor"
+            v-for="post in posts"
+            :key="post.title"
+            :color="authorCardData.timelineColor"
             small
           >
             <div>
               <div class="font-weight-normal">
-                <strong>{{ message.title }}</strong> @
-                {{ message.createdAt | shortDt }}
+                <a :href="`/posts/${post.slug}`">
+                  <strong>{{ post.title }}</strong>
+                </a>
+                @
+                {{ post.createdAt | shortDt }}
               </div>
-              <div>{{ message.description }}</div>
+              <div>{{ post.description }}</div>
             </div>
           </v-timeline-item>
         </v-timeline>
@@ -95,11 +154,19 @@ export default {
   },
   data() {
     return {
-      authorCardDatas: this.authorCardData,
+      posts: [],
       twitter: mdiTwitter,
       instagram: mdiInstagram,
       github: mdiGithub,
     }
+  },
+  async fetch() {
+    this.posts = await this.$content('posts', { deep: true })
+      .only(['title', 'description', 'slug', 'dir', 'author', 'createdAt'])
+      .where({ author: this.authorCardData.name })
+      .limit(5)
+      .sortBy('createdAt', 'desc')
+      .fetch()
   },
 }
 </script>
