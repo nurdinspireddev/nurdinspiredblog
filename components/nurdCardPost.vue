@@ -22,6 +22,9 @@
       <v-card-subtitle class="pb-0" v-text="post.subtitle" />
 
       <v-card-actions>
+        <span class="mx-3">{{ post.author }}</span>
+        <v-divider vertical inset class="mx-3" />
+        <span>Last Updated: {{ post.createdAt | shortDt }}</span>
         <v-spacer />
 
         <v-btn icon @click="show = !show">

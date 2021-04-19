@@ -55,13 +55,13 @@ export default {}
   opacity: 0.1;
   background: #1565c0;
   width: 100%;
-  height: 450px;
+  height: 500px;
   -ms-transform: skewY(-3eg);
   -webkit-transform: skewY(-3deg);
   transform: skewY(-3deg);
   border-radius: 30px;
   position: absolute;
-  top: 0px;
+  top: 1px;
   left: 18px;
 }
 .background-shape-left {
@@ -74,7 +74,7 @@ export default {}
   transform: skewY(-3deg);
   border-radius: 30px;
   position: absolute;
-  top: 500px;
+  top: 550px;
   right: 18px;
 }
 

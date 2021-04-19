@@ -1,31 +1,25 @@
 <template>
-  <div>
+  <v-container fluid>
     <div class="home-shape-right"></div>
-    <div class="post-list">
+    <nurd-back-home />
+    <div>
       <span class="text-sm-h2 text-h4">#{{ $route.params.slug }} posts</span>
-      <ul>
-        <li v-for="post in posts" :key="post.title" class="my-3">
-          <nuxt-link :to="`/posts/${post.slug}`" class="text-h5">
-            {{ post.title }}
-          </nuxt-link>
-          <div>@ {{ post.createdAt | shortDt }} - {{ post.author }}</div>
-          <div>"{{ post.description }}"</div>
-        </li>
-      </ul>
+      <tag-item :posts="posts" />
     </div>
-  </div>
+  </v-container>
 </template>
 <script>
 export default {
+  components: {
+    tagItem: () => import('./tagItem'),
+  },
   async asyncData({ $content, params }) {
     const posts = await $content('posts', { deep: true })
       .where({
         tags: { $contains: params.slug },
       })
       .fetch()
-    return {
-      posts,
-    }
+    return { posts }
   },
 }
 </script>

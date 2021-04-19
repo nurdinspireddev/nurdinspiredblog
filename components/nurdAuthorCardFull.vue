@@ -8,10 +8,7 @@
       >
         <!-- Author Pic -->
         <v-avatar size="100">
-          <img
-            alt="user"
-            src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
-          />
+          <img alt="user" :src="authorCardData.avatar" />
         </v-avatar>
 
         <p class="text-h5 ml-3 mt-4" v-html="authorCardData.name" />
