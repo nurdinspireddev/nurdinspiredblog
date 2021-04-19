@@ -59,7 +59,7 @@ export default {
   content: {
     markdown: {
     prism: {
-      theme: 'prism-themes/themes/prism-dm-mono.css'
+      theme: '~/assets/prism-dm-mono.css'
     }
   }
   },
