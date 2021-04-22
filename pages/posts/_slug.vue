@@ -22,7 +22,7 @@
             {{ post.readingTime.text }}
           </div>
           <!-- Timestamps -->
-          <!-- <div>Created: {{ post.createdAt | shortDt }}</div> -->
+          <div>Created: {{ post.createdAt | shortDt }}</div>
           <div>Last Updated: {{ post.updatedAt | shortDt }}</div>
           <!-- Tags -->
           <div>
