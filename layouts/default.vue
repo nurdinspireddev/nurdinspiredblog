@@ -30,31 +30,31 @@ export default {}
 .home-shape-right {
   opacity: 0.1;
   background: #1565c0;
-  width: 85%;
+  width: 95%;
   height: 105%;
   -ms-transform: skewX(-eg);
   -webkit-transform: skewX(7deg);
   transform: skewX(7deg);
   border-radius: 30px;
-  position: absolute;
+  position: fixed;
   top: -100px;
 }
 .home-shape-left {
   opacity: 0.1;
   background: red;
-  width: 75%;
+  width: 95%;
   height: 106%;
   -ms-transform: skewX(-eg);
   -webkit-transform: skewX(-15deg);
   transform: skewX(-21deg);
   border-radius: 30px;
-  position: absolute;
+  position: fixed;
   top: -100px;
 }
 .background-shape-right {
   opacity: 0.1;
   background: #1565c0;
-  width: 100%;
+  width: 95%;
   height: 500px;
   -ms-transform: skewY(-3eg);
   -webkit-transform: skewY(-3deg);
@@ -67,7 +67,7 @@ export default {}
 .background-shape-left {
   opacity: 0.1;
   background: #d84315;
-  width: 100%;
+  width: 95%;
   height: 550px;
   -ms-transform: skewY(-3eg);
   -webkit-transform: skewY(-3deg);
