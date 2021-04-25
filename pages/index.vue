@@ -3,19 +3,15 @@
     <div class="home-shape-right"></div>
     <div class="home-shape-left"></div>
     <v-row justify="center">
-      <v-col cols="12" sm="12" md="8">
-        <v-row>
-          <v-col
-            cols="12"
-            xs="12"
-            md="6"
-            lg="4"
-            v-for="(p, index) in post"
-            :key="index"
-          >
-            <nurd-card-post :post="p"></nurd-card-post>
-          </v-col>
-        </v-row>
+      <v-col
+        cols="12"
+        xs="12"
+        md="6"
+        lg="4"
+        v-for="(p, index) in post"
+        :key="index"
+      >
+        <nurd-card-post :post="p"></nurd-card-post>
       </v-col>
     </v-row>
   </div>
