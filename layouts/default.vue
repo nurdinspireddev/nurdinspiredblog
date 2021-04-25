@@ -27,6 +27,10 @@ export default {}
   color: #fff;
 }
 
+img {
+  max-width: -webkit-fill-available;
+}
+
 .home-shape-right {
   opacity: 0.1;
   background: #1565c0;

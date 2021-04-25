@@ -1,11 +1,11 @@
 ---
-title: Developer Terminal Setup
+title: Terminal Setup
 subtitle: ZSH Theme Setup on macOS
 description: Coding with style, changing BASH to ZSH
 image: img/2021-04-17-developer-terminal-setup/index.png
 tags:
   - macOS
-author: Josh C
+author: Josh
 ---
 
 # iTERM2

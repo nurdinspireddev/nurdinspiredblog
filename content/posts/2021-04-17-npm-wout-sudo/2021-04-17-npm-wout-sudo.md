@@ -5,7 +5,7 @@ description: Less keystrokes makes us all better people
 image: img/2021-04-17-npm-wout-sudo/index.png
 tags:
   - Npm
-author: Josh C
+author: Josh
 ---
 
 # NPM Without SUDO!
