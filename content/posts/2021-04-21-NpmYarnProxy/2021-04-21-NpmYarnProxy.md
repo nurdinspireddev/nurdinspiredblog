@@ -6,7 +6,7 @@ image: img/2021-04-21-NpmYarnProxy/index.png
 tags:
   - Npm
   - Yarn
-author: Josh C
+author: Josh
 ---
 
 # NPM

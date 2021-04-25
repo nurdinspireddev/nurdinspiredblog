@@ -3,7 +3,7 @@
     <div class="home-shape-right"></div>
     <nurd-back-home />
     <div>
-      <span class="text-sm-h2 text-h4">#{{ $route.params.slug }} posts</span>
+      <span class="text-h5 text-md-h4 text-lg-h2">#{{ $route.params.slug }} posts</span>
       <tag-item :posts="posts" />
     </div>
   </v-container>

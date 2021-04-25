@@ -6,7 +6,7 @@ image: img/2021-04-21-mssql-macos/index.png
 tags:
   - macOS
   - SQL Server
-author: Josh Campos
+author: Josh
 ---
 
 # Intro
@@ -118,9 +118,9 @@ You can leave out the <code class="language-bash">-P</code> flag and you will be
 ![Docker Container Connect](/img/2021-04-21-mssql-macos/docker_mac_connect_container.png)
 
 A simple script in the SQLCMD prompt can be tested with the prompt below.
-From within the SQLCMD prompt, you can feed any T-SQL statement followed with the <code class="language-bash"daGO</code> statement to run the command.
+From within the SQLCMD prompt, you can feed any T-SQL statement followed with the <code class="language-sql">GO</code> statement to run the command.
 
-```
+```sql
 SELECT Name FROM Sys.Databases;
 Go
 ```

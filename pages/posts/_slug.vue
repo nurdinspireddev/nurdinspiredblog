@@ -1,8 +1,9 @@
 <template>
-  <v-container fluid>
+  <v-container>
     <div class="background-shape-right"></div>
     <nurd-back-home />
-    <div>
+    <v-row justify="center">
+      <v-col cols="12" sm="12" md="12" lg="9">
       <v-row>
         <!-- Post image -->
         <v-col cols="12" md="4">
@@ -45,7 +46,8 @@
       </v-row> -->
       <v-spacer class="py-10" />
       <nuxt-content :document="post" />
-    </div>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 <script>
