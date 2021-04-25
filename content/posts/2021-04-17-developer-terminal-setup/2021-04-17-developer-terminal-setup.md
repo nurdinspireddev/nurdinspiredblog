@@ -6,6 +6,7 @@ image: img/2021-04-17-developer-terminal-setup/index.png
 tags:
   - macOS
 author: Josh
+createdAt: 2021-04-17 08:00
 ---
 
 # iTERM2
