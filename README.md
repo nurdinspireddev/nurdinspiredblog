@@ -1,5 +1,5 @@
 # nurdinspiredblog
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0ca53d36-4dfb-4b28-8176-f402373acb42/deploy-status)](https://app.netlify.com/sites/romantic-snyder-93a1d6/deploys)
 ## Build Setup
 
 ```bash
