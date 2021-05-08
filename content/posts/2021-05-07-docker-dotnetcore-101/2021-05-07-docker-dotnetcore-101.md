@@ -1,0 +1,40 @@
+---
+title: Docker - .NET Core 101
+subtitle: Minimum viable understanding
+description: What we pretend to know about containers..
+image: img/2021-05-07-docker-dotnetcore-101/index.png
+tags:
+  - Docker
+author: Josh
+createdAt: 2021-05-07 08:00
+---
+
+# Who, What, Why, and How of Containers
+
+## Who
+
+Let's answer this question first... Docker is the _WHO_ in this post.
+
+## What
+
+Now let's focus on _WHAT_ a Docker container is and does.
+
+In its most general form, a container is meant to package and isolate a group items and transport them. For example, a shipping container is meant to organize products, isolate them from other products, protect them, and transport them from a manufacturer's warehouse to some distribution center to end up in the hands of a consumer. A packaging slip or shipping manifest specifies the details of the container such as where its coming from, where its going, what's inside and other delivery instructions.
+
+Same concept here for development. A Docker container isolates an application from other applications and resources. A Dockerfile (shipping manifest) follows a standard when setting up an application. The Dockerfile to required to identify the following:
+
+- resources (CPU/ Mem)
+- application build requirements
+- dependencies
+- input/ output settings
+- etc.
+
+These configurations are used to specify requirements for your application and how to run the application whether its on your local machine, a server, or scaled across a data center.
+
+## Why
+
+Why bother with containers? We haven't used them before, so why now?
+
+## How
+
+Hands on experience is how we answer this question. Let's walk through a working example of setting up a <code class="language-bash">.NET Core WEBAPI</code> project running in Docker.

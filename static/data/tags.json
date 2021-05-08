@@ -58,5 +58,11 @@
     "link": "SQL Server",
     "color": "grey darken-2",
     "textColor": "white"
+  },
+  {
+    "name": "Docker",
+    "link": "Docker",
+    "color": "blue darken-1",
+    "textColor": "white"
   }
 ]
