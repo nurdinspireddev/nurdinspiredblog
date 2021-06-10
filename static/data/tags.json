@@ -40,11 +40,5 @@
     "link": "Docker",
     "color": "blue darken-1",
     "textColor": "white"
-  },
-  {
-    "name": ".NET Core",
-    "link": ".NET Core",
-    "color": "purple darken-1",
-    "textColor": "white"
   }
 ]
