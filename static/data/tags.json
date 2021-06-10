@@ -6,12 +6,6 @@
     "textColor": "black"
   },
   {
-    "name": "C#",
-    "link": "C#",
-    "color": "purple",
-    "textColor": "white"
-  },
-  {
     "name": "DataEngineering",
     "link": "DataEngineering",
     "color": "black",
@@ -62,7 +56,19 @@
   {
     "name": "Git",
     "link": "Git",
-    "color": "purple darken-2",
+    "color": "orange darken-2",
     "textColor": "white" 
+  },
+  {
+   "name": "Docker",
+    "link": "Docker",
+    "color": "blue darken-1",
+    "textColor": "white"
+  },
+  {
+    "name": ".NET Core",
+    "link": ".NET Core",
+    "color": "purple darken-1",
+    "textColor": "white"
   }
 ]
