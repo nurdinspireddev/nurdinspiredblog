@@ -1,29 +1,5 @@
 [
   {
-    "name": "JavaScript",
-    "link": "JavaScript",
-    "color": "yellow",
-    "textColor": "black"
-  },
-  {
-    "name": "DataEngineering",
-    "link": "DataEngineering",
-    "color": "black",
-    "textColor": "white"
-  },
-  {
-    "name": "Vue.JS",
-    "link": "Vue.JS",
-    "color": "green",
-    "textColor": "white"
-  },
-  {
-    "name": "Vuex",
-    "link": "Vuex",
-    "color": "green",
-    "textColor": "white"
-  },
-  {
     "name": "Npm",
     "link": "Npm",
     "color": "red",
@@ -63,12 +39,6 @@
    "name": "Docker",
     "link": "Docker",
     "color": "blue darken-1",
-    "textColor": "white"
-  },
-  {
-    "name": ".NET Core",
-    "link": ".NET Core",
-    "color": "purple darken-1",
     "textColor": "white"
   }
 ]
