@@ -60,7 +60,13 @@
     "textColor": "white"
   },
   {
-    "name": "Docker",
+    "name": "Git",
+    "link": "Git",
+    "color": "orange darken-2",
+    "textColor": "white" 
+  },
+  {
+   "name": "Docker",
     "link": "Docker",
     "color": "blue darken-1",
     "textColor": "white"
