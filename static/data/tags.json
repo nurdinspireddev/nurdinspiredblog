@@ -36,7 +36,7 @@
     "textColor": "white" 
   },
   {
-   "name": "Docker",
+    "name": "Docker",
     "link": "Docker",
     "color": "blue darken-1",
     "textColor": "white"
