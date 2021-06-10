@@ -58,5 +58,11 @@
     "link": "SQL Server",
     "color": "grey darken-2",
     "textColor": "white"
+  },
+  {
+    "name": "Git",
+    "link": "Git",
+    "color": "purple darken-2",
+    "textColor": "white" 
   }
 ]
