@@ -3,7 +3,7 @@
     <div class="background-shape-right"></div>
     <nurd-back-home />
     <v-row justify="center">
-      <v-col cols="12" sm="12" md="12" lg="9">
+      <v-col cols="12" sm="12" md="12" lg="8">
         <v-row>
           <!-- Post image -->
           <v-col cols="12" md="5">
