@@ -25,7 +25,7 @@ export default {
   async fetch() {
     this.posts = await this.$content('posts', { deep: true })
       .only(['title', 'description', 'slug', 'dir', 'createdAt', 'tags'])
-      .sortBy('createdAt', 'desc')
+      //.sortBy('createdAt', 'desc')
       .fetch()
 
     this.posts.forEach((curr) => {
@@ -38,6 +38,10 @@ export default {
         }
       })
     })
+
+    this.tagArray.sort((a, b) =>
+      a.name.toLowerCase() > b.name.toLowerCase() ? 1 : -1
+    )
   },
 }
 </script>

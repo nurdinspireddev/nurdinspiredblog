@@ -40,5 +40,11 @@
     "link": "Docker",
     "color": "blue darken-1",
     "textColor": "white"
+  },
+  {
+    "name": "Python",
+    "link": "Python",
+    "color": "green darken-1",
+    "textColor": "black"
   }
 ]
